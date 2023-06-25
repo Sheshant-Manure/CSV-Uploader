@@ -1,0 +1,28 @@
+<!-- Style Sheet -->
+<link rel="stylesheet" href="/CSS/home.css">
+
+<!-- Navigation bar to show Username and Sign Out button -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <b class="navbar-brand"><%= user_name %></b>
+        <a class="navbar-brand" href="/users/sign-out">Sign Out</a>
+    </div>
+  </nav>
+
+<!-- Upload Box -->
+<div class="container">
+    <form action="/uploads/csvfile" method="post" enctype="multipart/form-data">
+    <div id="upload_box">
+        <label class="custom-file-upload">
+            <input type="file" class="form-control-file" name="csv" accept=".csv">
+            <h2>Select File</h2>
+            <p class="csv">(Format: CSV files only)</p>
+        </label>
+    </div><br>
+    <div class="row">
+        <div class="col">
+            <p style="text-align: center;"><button type="submit" class="btn btn-success">Upload</button></p>
+        </div>
+    </div>
+    </form>
+</div>

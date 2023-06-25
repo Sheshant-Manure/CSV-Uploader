@@ -1,0 +1,31 @@
+#upload_box {
+    margin-top: 30px;
+    height: 300px;
+    padding: 100px;
+    text-align: center;
+    border: 1px dashed black;
+}
+
+#upload_box a {
+    text-decoration: none;
+}
+
+#upload_box p {
+    font-size: small;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    margin-top: -25px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.custom-file-upload h2, p.csv {
+    color: rgb(37, 136, 223);
+}

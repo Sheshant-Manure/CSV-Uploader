@@ -1,0 +1,4 @@
+"batch","stu_id","company","interview_date","result","placement_status"
+1,12,"Qvantel","2023-06-16","pass","Placed"
+2,21,"TCS","2023-06-13","on-hold","Not Placed"
+3,31,"Cognizant","2023-06-17","on-hold","Not Placed"
