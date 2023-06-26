@@ -1,4 +1,5 @@
 const User = require('../Models/users');
+const CSV = require('../Models/csv_schema');
 
 // Format: module.exports.actionName = function() { body/definition }
 
@@ -30,7 +31,7 @@ module.exports.new_user_page = (req, res) => {
     });  
 }
 
-let user;
+let user, csv;
 module.exports.signIn = async(req, res) => {
     user = await User.find({
         $or: [
@@ -38,6 +39,8 @@ module.exports.signIn = async(req, res) => {
           { email: req.body.email_or_username }
         ]
       });
+
+    csv = await CSV.find({});
     if (req.body.password === user[0].password)
     {
         // Set the session variables
@@ -45,7 +48,8 @@ module.exports.signIn = async(req, res) => {
         req.session.Username = user[0].username;
         return res.render('home',{
             title:'CSV Uploader | Home Page',
-            user_name: user[0].username
+            user_name: user[0].username,
+            files: csv
         });
     }
     else if (req.session.SignIn === false)
@@ -68,7 +72,8 @@ module.exports.signInGetReq = (req, res) => {
     {
         return res.render('home',{
             title:'CSV Uploader | Home Page',
-            user_name: user[0].username
+            user_name: user[0].username,
+            files: csv
         });
     }
     else

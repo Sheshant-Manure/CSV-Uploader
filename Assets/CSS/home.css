@@ -29,3 +29,7 @@ input[type="file"] {
 .custom-file-upload h2, p.csv {
     color: rgb(37, 136, 223);
 }
+
+table {
+    text-align: center;
+}

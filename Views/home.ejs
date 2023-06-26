@@ -26,3 +26,28 @@
     </div>
     </form>
 </div>
+
+<!-- List of CSV Files -->
+<div class="container">
+    <div class="row">
+        <h2>My CSV Files</h2>
+        <div class="col-6">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Serial #</th>
+                    <th scope="col">Filename</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% files.forEach((file, index)=>{ %>
+                        <tr>
+                            <td> <%= index + 1 %> </td>
+                            <td><a href="/files/<%= file.filename %>"><%= file.filename %></a></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

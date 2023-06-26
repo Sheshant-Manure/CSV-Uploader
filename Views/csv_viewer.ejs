@@ -1,0 +1,21 @@
+<div class="container">
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <% header.forEach((th)=>{ %>
+            <th scope="col"><%= th %></th>
+            <% }) %>
+          </tr>
+        </thead>
+        <tbody>
+            <% rows.forEach((row)=>{ %>
+                <tr>
+                    <% row.forEach((td)=>{ %>
+                        <td><%= td %></td>
+                    <% }) %>
+                </tr>
+            <% }) %>
+        </tbody>
+      </table>
+</div>
